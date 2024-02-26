@@ -1,4 +1,4 @@
-package org.example.servlet;
+package org.example;
 
 import javax.servlet.DispatcherType;
 import javax.servlet.ServletException;
