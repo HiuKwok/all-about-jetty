@@ -194,7 +194,6 @@ public class ServletMain {
 
 
 
-
 // Add the Servlet implementing the cart functionality to the context.
         ServletHolder servletHolder = context.addServlet(ShopCartServlet.class, "/cart/*");
 // Configure the Servlet with init-parameters.
@@ -204,6 +203,9 @@ public class ServletMain {
         FilterHolder filterHolder = context.addFilter(CrossOriginFilter.class, "/*", EnumSet.of(DispatcherType.REQUEST));
 // Configure the filter.
         filterHolder.setAsyncSupported(true);
+
+
+        server.setHandler(testHandler);
 
         server.start();
     }
